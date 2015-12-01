@@ -1,6 +1,8 @@
 define(function (require) {
     var firebase = require("firebase");
+    var Q = require("q");
     var _ = require("lodash");
+   
     var newMovieObject;
     
     return {
@@ -122,20 +124,22 @@ define(function (require) {
             },          
                 
         
-        getMovie: function (title) {
+        getMovie: function (findTitle) {
+            console.log(findTitle);
+            
+            var deferred = Q.defer();
 
-          $.ajax({
+           $.ajax({
                   type: "GET",  
-                  url: "http://www.omdbapi.com/?s=" + title + "&y=&plot=shorta&r=json",
+                  url: "http://www.omdbapi.com/?t=" + findTitle+ "&y=&plot=shorta&r=json",
                   dataType: "json"
                 })
                 .done(function(titleData){
 
-                    return titleData;
+                    deferred.resolve(titleData);
 
-                })
-            
-
+                });
+           return deferred.promise;
         }
     };
     
