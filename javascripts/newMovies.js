@@ -37,7 +37,7 @@ return {
 				plot: newMovieObject["Plot"],
 				id: newMovieObject["imdbID"],
 				unwatched: "true",
-				rating: 1
+				rating: 0
 				
 				
 			};

@@ -73,7 +73,7 @@ define(function (require) {
 
                     //I made a function for this because I could not get the ajax to 
                     //run inside the firebase .once() function
-        function findStuff () {
+            function findStuff () {
                 title = title.replace(" ", "%");
                     
                 $.ajax({
@@ -91,7 +91,7 @@ define(function (require) {
 
                     for(var i = 0; i < searchMovie.length; i++) {
 
-                        var id = searchMovie[i].imdbID; 
+                      var id = searchMovie[i].imdbID; 
                       var poster = searchMovie[i].Poster;
                         console.log("ID", id, poster)
                        

@@ -2,8 +2,6 @@ define(function (require) {
 	var $ = require("jquery");
 	var firebase = require("firebase");
 	
-
-
 			$("body").on("click", ".delete", function() {
 			ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
 			
@@ -13,7 +11,7 @@ define(function (require) {
 			ref = ref.child(userID);
 			var movieKey = $(this).attr("id");
 			ref = ref.child(movieKey);
-			console.log("delte ref", ref);
+			console.log("delete ref", ref);
 			ref.remove();
 
 			var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
@@ -27,16 +25,20 @@ define(function (require) {
 				var snapshotObject = snapshot.val();
 				console.log(snapshotObject);
 
+				
+				//this is an attempt to archive the code
+				var archiveRef = new Firebase("https://mbt-movie-history.firebaseio.com/users/" + uuid + "/archive");
+				archiveRef.push(snapshotObject);
+
 				require(["hbs!../templates/allMovies"], function(posterTemplate) {
 	  			 
 	  			 		$("#content").html(posterTemplate(snapshotObject));
 
 	  			 			});
-			});
-			
+			});			
   				});
-
-
-
 //end of module
 });
+
+		
+
