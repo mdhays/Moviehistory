@@ -131,7 +131,7 @@ define(function (require) {
 
            $.ajax({
                   type: "GET",  
-                  url: "http://www.omdbapi.com/?t=" + findTitle+ "&y=&plot=shorta&r=json",
+                  url: "http://www.omdbapi.com/?i=" + findTitle+ "&y=&plot=shorta&r=json",
                   dataType: "json"
                 })
                 .done(function(titleData){

@@ -7,27 +7,26 @@ define(function (require) {
 			
 			var user = ref.getAuth();
 			var userID = user.uid;
+
 			
 			ref = ref.child(userID);
 			var movieKey = $(this).attr("id");
 			ref = ref.child(movieKey);
-			console.log("delete ref", ref);
-			ref.remove();
+			console.log("delete key", movieKey);
+			
 
-			var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
-			console.log("ref", ref);
-			var user = ref.getAuth();
-			var uid = user.uid;
-			ref = ref.child(uid);
-
-			ref.on("value", function(snapshot){
+			ref.once("value", function(snapshot){
 
 				var snapshotObject = snapshot.val();
 				console.log(snapshotObject);
 
 				
 				//this is an attempt to archive the code
-				var archiveRef = new Firebase("https://mbt-movie-history.firebaseio.com/users/" + uuid + "/archive");
+				var archiveRef = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
+				console.log(snapshotObject);
+				var user = archiveRef.getAuth();
+				var userID = user.uid;
+				archiveRef = new Firebase("https://mbt-movie-history.firebaseio.com/users/" + userID + "/archive");
 				archiveRef.push(snapshotObject);
 
 				require(["hbs!../templates/allMovies"], function(posterTemplate) {
@@ -35,7 +34,9 @@ define(function (require) {
 	  			 		$("#content").html(posterTemplate(snapshotObject));
 
 	  			 			});
-			});			
+				ref.remove();
+			});	
+						
   				});
 //end of module
 });
