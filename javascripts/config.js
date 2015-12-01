@@ -8,18 +8,20 @@ require.config({
     'q': '../lib/bower_components/q/q',
     'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min',
     'es6': '../lib/bower_components/requirejs-babel/es6',
-    'babel': '../lib/bower_components/requirejs-babel/babel-5.8.22.min'
+    'babel': '../lib/bower_components/requirejs-babel/babel-5.8.22.min',
+    'slider': '../lib/bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min'
   },
   shim: {
     'bootstrap': ['jquery'],
     'firebase': {
       exports: 'Firebase'
-    }
+    },
+    'slider': ['bootstrap']
   }
 });
 require(
-  ["dependencies", "splashview", "findMovie", "authentication", "newMovies", "deleteMovie","addWatched", "watchedView", "allView", "unwatchedView", "modalView", "starRating", "favoriteView"], 
-  function(_$_,  splashview, findMovie, authentication, newMovies, deleteMovies, addWatched, watchedView, allView, unwatchedView, modalView, starRating, favoriteView) {
+  ["dependencies", "splashview", "findMovie", "authentication", "newMovies", "deleteMovie","addWatched", "watchedView", "allView", "unwatchedView", "modalView", "starRating", "favoriteView", "rangeSearch"], 
+  function(_$_,  splashview, findMovie, authentication, newMovies, deleteMovies, addWatched, watchedView, allView, unwatchedView, modalView, starRating, favoriteView, rangeSearch) {
     
     splashview.splashViewDisplay();
 
@@ -27,6 +29,7 @@ require(
 
     newMovies.newMovie();
 
+    
   
 
 

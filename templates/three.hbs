@@ -1,0 +1,17 @@
+	{{#each this}}
+		
+		{{#if three }}
+
+	<div class="col-xs-6 col-md-3 " >
+
+
+    	<a href="#" class="thumbnail movie-info" id={{@key}} data-toggle="modal" data-target="#posterModal">
+    		<span class="glyphicon glyphicon-remove delete" id={{@key}}  aria-hidden="true"></span>
+    		<img src= "http://img.omdbapi.com/?i={{ id }}&apikey=7c212437">
+    	</a>
+    </div>
+    
+    
+		{{/if}}
+	{{/each}}
+     

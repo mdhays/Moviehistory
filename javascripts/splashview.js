@@ -10,6 +10,7 @@ return {
 
       $("#nav-bar").hide();
       $("#nav-links").hide();
+      $(".slider-style").hide();
     }
   };
 });

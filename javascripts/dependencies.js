@@ -5,9 +5,7 @@ define(function(require) {
   var _ = require("lodash");
   var h = require("hbs");
   var fb = require("firebase");
- 
+  var slider = require("slider");
 
-  
-  
 
 });

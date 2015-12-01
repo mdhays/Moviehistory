@@ -15,7 +15,7 @@ $("body").on("click", ".star10", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 10, favorite: "true" });
+            ref.update({rating: 10, ten: "true" });
 
     });
 $("body").on("click", ".star9", function(){
@@ -31,7 +31,7 @@ $("body").on("click", ".star9", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 9, favorite: "true" });
+            ref.update({rating: 9, nine: "true" });
 
     });
 
@@ -48,7 +48,7 @@ $("body").on("click", ".star8", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 8, favorite: "true" });
+            ref.update({rating: 8, eight: "true" });
 
     });
 $("body").on("click", ".star7", function(){
@@ -64,7 +64,7 @@ $("body").on("click", ".star7", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 7, favorite: "true" });
+            ref.update({rating: 7, seven: "true" });
 
     });
 
@@ -81,7 +81,7 @@ $("body").on("click", ".star6", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 6, favorite: "true" });
+            ref.update({rating: 6, six: "true" });
 
        
 
@@ -101,7 +101,7 @@ $("body").on("click", ".star6", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 5, favorite: "true" });
+            ref.update({rating: 5, five: "true" });
 
        
 
@@ -120,7 +120,7 @@ $("body").on("click", ".star4", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 4, favorite: null });
+            ref.update({rating: 4, four: "true" });
 
        
 
@@ -139,7 +139,7 @@ $("body").on("click", ".star3", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 3, favorite: null });
+            ref.update({rating: 3, three: "true" });
 
        
 
@@ -158,7 +158,7 @@ $("body").on("click", ".star2", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 2, favorite: null });
+            ref.update({rating: 2, two: "true" });
 
        
 
@@ -177,7 +177,7 @@ $("body").on("click", ".star1", function(){
             console.log("this is", this)
             ref = ref.child(userID);
             ref = ref.child(movieKey);
-            ref.update({rating: 1, favorite: null });
+            ref.update({rating: 1, one: "true" });
 
        
 

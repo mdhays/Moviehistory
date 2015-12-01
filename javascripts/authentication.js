@@ -18,6 +18,7 @@ define(function(require) {
     		$("#content").html("");
     		$("#nav-bar").show();
     		$("#nav-links").show();
+    		$(".slider-style").show();
     		
     		//fetch data from firebase based on login info 
     		var ref = new Firebase("https://mbt-movie-history.firebaseio.com/users/");
