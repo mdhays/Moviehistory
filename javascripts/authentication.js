@@ -93,6 +93,7 @@ define(function(require) {
 	  				}
 				});
 			},
+			
 			logOut: function () {
                 // Logging out
                  

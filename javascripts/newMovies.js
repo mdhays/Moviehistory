@@ -23,9 +23,10 @@ return {
 		ref = ref.child(uid);
 			console.log("heart clicked");
 			var title = $(this).attr("id");
-			console.log(this);
+			console.log(title);
 			var newMovieObject = getNewMovie.getMovie(title);
-			console.log(newMovieObject);
+			
+
 
 			var newMovie = {
 
