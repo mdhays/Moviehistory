@@ -1,6 +1,7 @@
 define(function (require) {
 	var firebase = require("firebase");
 	var getNewMovie = require("findMovie");
+	 var Q = require("q");
 
 
 return {
@@ -22,20 +23,22 @@ return {
 		var uid = user.uid;
 		ref = ref.child(uid);
 			console.log("heart clicked");
-			var title = $(this).attr("id");
-			console.log(title);
-			var newMovieObject = getNewMovie.getMovie(title);
-			
+			var findTitle = $(this).attr("id");
+			console.log(findTitle);
 
+			console.log(getNewMovie.getMovie(findTitle));
 
-			var newMovie = {
+			getNewMovie.getMovie(findTitle).then(function(data) {
+				console.log(data);
+				
+				var newMovie = {
 
-				title: newMovieObject["Title"],
-				actors: newMovieObject["Actors"],
-				year: newMovieObject["Year"],
-				poster: newMovieObject["Poster"],
-				plot: newMovieObject["Plot"],
-				id: newMovieObject["imdbID"],
+				title: data["Title"],
+				actors: data["Actors"],
+				year: data["Year"],
+				poster: data["Poster"],
+				plot: data["Plot"],
+				id: data["imdbID"],
 				unwatched: "true",
 				rating: 1
 				
@@ -44,7 +47,14 @@ return {
 
 			ref.push(newMovie);
 
-			console.log(newMovie);
+
+			})
+			
+			
+
+
+			
+			
 			
 			$(this).parent().remove();
 

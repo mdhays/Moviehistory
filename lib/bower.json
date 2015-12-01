@@ -22,8 +22,5 @@
     "q": "1.0.1",
     "require-handlebars-plugin": "~1.0.0",
     "requirejs": "~2.1.21"
-  },
-  "resolutions": {
-    "q": "~2.0.2"
   }
 }
