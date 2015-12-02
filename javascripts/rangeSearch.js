@@ -2,9 +2,7 @@ define(function (require) {
 	var firebase = require("firebase");
 	var _ = require("lodash");
 	var $ = require("jquery");
-	var slider = require("slider");
-	var cat = $("#ex8");
-	$("#ex8").slider({tooltip: 'always'});
+
 
 
 	$(".search-rating").on("change", function (){
@@ -30,6 +28,14 @@ define(function (require) {
 				if (rangeVal === "0") {
 
 				require(["hbs!../templates/unwatched"], function(posterTemplate) {
+	  			 
+	  			 		$("#content").html(posterTemplate(snapshotObject));
+
+	  			 		});
+					};
+				if (rangeVal === "0") {
+
+				require(["hbs!../templates/allMovies"], function(posterTemplate) {
 	  			 
 	  			 		$("#content").html(posterTemplate(snapshotObject));
 

@@ -7,7 +7,6 @@
   <title>Movie History</title>
 
   <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="lib/bower_components/seiyria-bootstrap-slider/css/bootstrap-slider.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
@@ -35,6 +34,7 @@
       <form class="navbar-form navbar-left" role="search">
         
         <input type="text" id="find-movie" placeholder="Search movies...">
+        <input type="range" class="search-rating" min="0" max="10">
 
       </form>
       <ul class="nav navbar-nav navbar-right">
@@ -55,9 +55,7 @@
   <a class="btn btn-default" href="#" role="button" id="watched">Watched</a>
   <a class="btn btn-default" href="#" role="button" id="unwatched">Unwatched</a>
   <a class="btn btn-default" href="#" role="button" id="favorite">Favorites</a></div>
-  <div class="slider-style">
-    <input id="ex8" class="search-rating" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="10"/>
-    </div>
+  
 
 <div id="content">
 
